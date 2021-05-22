@@ -194,7 +194,6 @@ img{
 .home__shape{
     width:220px;
     height:220px;
-    background-color: ;
     border-radius: 50px;
 }
 .home__img{
@@ -233,4 +232,20 @@ img{
 .button:hover{
     transform: translateY(-.25rem);
 
+}
+
+.featured__container{
+    row-gap: 2rem;
+    grid-template-columns: repeat(autofit, minmax(220px, 1fr));
+}
+
+.bag{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--dark-color-light);
+    transition: .3s;
+    border-radius: .5rem;
 }
