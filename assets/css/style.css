@@ -234,9 +234,25 @@ img{
 
 }
 
+.button-light{
+    display:inline-flex;
+    color: var(--dark-color);
+    font-weight: var(--font-bold);
+    align-items: center;
+}
+
+.button-icon{
+font-size: 1.25rem;
+margin-left: var(--mb-1);
+transition: .3s;
+}
+
+.button-light:hover .button-icon{
+    transform:
+}
 .featured__container{
     row-gap: 2rem;
-    grid-template-columns: repeat(autofit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .bag{
@@ -245,7 +261,47 @@ img{
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    background-color: var(--dark-color-light);
+    background-color: var(--dark-color-lighten);
     transition: .3s;
     border-radius: .5rem;
+}
+
+.bag__sale{
+    position: absolute;
+    left: .5rem;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding:.25rem .5rem;
+    border-radius: .25rem;
+    font-size: var(--h2-font-size);
+    transform:rotate(-90deg);
+    letter-spacing: .1rem;
+}
+
+.bag__img{
+    width: 220px;
+    margin-top: var(--mb-3);
+    margin-bottom: var(--rotate-img);
+   
+    filter: drop-shadow(0 12px 8px rgba(0,0,0,.2));
+}
+
+.bag__name, .bag__price{
+    font-size: var(--h2-font-size);
+    letter-spacing: .1rem;
+    font-weight: var(--font-semi-bold);
+}
+
+.bag__name{
+    margin-bottom: var(--mb-1);
+}
+
+.bag__price{
+    margin-bottom: var(--mb-4);
+}
+
+.bag:hover{
+    transform: translateY(-.5rem);
+}
+    transform:translate
 }
