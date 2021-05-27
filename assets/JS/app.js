@@ -13,7 +13,7 @@ const showMenu = (toggleId, navId)=>{
 showMenu('nav-toggle','nav-menu')
 
 
-const navLink = document.querySelectorAll('.nav_link'),
+const navLink = document.querySelectorAll('.nav__link'),
     navMenu = document.getElementById('nav-menu')
 
 function linkAction(){
@@ -35,9 +35,9 @@ function scrollActive(){
         sectionId = current.getAttribute('id')
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav_menu a[href*='+ sectionId +']').classList.add('active')
+            document.querySelector('.nav__menu a[href*='+ sectionId +']').classList.add('active')
         }else{
-            document.querySelector('.nav_menu a[href*='+ sectionId +']').classList.remove('active')
+            document.querySelector('.nav__menu a[href*='+ sectionId +']').classList.remove('active')
         }
     })
 }
@@ -45,6 +45,7 @@ function scrollActive(){
 
 window.onscroll = ()=>{
     const nav = document.getElementById('header')
-    if(this.scrollY >=200) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+    if(this.scrollY >=200) nav.classList.add('scroll-header');
+     else nav.classList.remove('scroll-header')
     
 } 
